@@ -13,6 +13,9 @@
 		554D0B2029129FD800DE78EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554D0B1E29129FD800DE78EC /* Main.storyboard */; };
 		554D0B2229129FDA00DE78EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 554D0B2129129FDA00DE78EC /* Assets.xcassets */; };
 		554D0B2529129FDA00DE78EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 554D0B2329129FDA00DE78EC /* LaunchScreen.storyboard */; };
+		554D0B322912A19D00DE78EC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D0B312912A19D00DE78EC /* DataManager.swift */; };
+		554D0B352912A22E00DE78EC /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 554D0B342912A22E00DE78EC /* SpringAnimation */; };
+		554D0B382912A83900DE78EC /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D0B372912A83900DE78EC /* Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		554D0B2129129FDA00DE78EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		554D0B2429129FDA00DE78EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		554D0B2629129FDA00DE78EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		554D0B312912A19D00DE78EC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		554D0B372912A83900DE78EC /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554D0B352912A22E00DE78EC /* SpringAnimation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,65 @@
 		554D0B1729129FD800DE78EC /* RandomAnimations */ = {
 			isa = PBXGroup;
 			children = (
-				554D0B1829129FD800DE78EC /* AppDelegate.swift */,
-				554D0B1A29129FD800DE78EC /* SceneDelegate.swift */,
-				554D0B1C29129FD800DE78EC /* ViewController.swift */,
-				554D0B1E29129FD800DE78EC /* Main.storyboard */,
-				554D0B2129129FDA00DE78EC /* Assets.xcassets */,
-				554D0B2329129FDA00DE78EC /* LaunchScreen.storyboard */,
-				554D0B2629129FDA00DE78EC /* Info.plist */,
+				554D0B2C2912A03500DE78EC /* App */,
+				554D0B2D2912A04C00DE78EC /* View Controllers */,
+				554D0B362912A81900DE78EC /* Models */,
+				554D0B302912A17E00DE78EC /* Services */,
+				554D0B2E2912A05900DE78EC /* Storyboards */,
+				554D0B2F2912A06400DE78EC /* Resourses */,
 			);
 			path = RandomAnimations;
+			sourceTree = "<group>";
+		};
+		554D0B2C2912A03500DE78EC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				554D0B1829129FD800DE78EC /* AppDelegate.swift */,
+				554D0B1A29129FD800DE78EC /* SceneDelegate.swift */,
+				554D0B2629129FDA00DE78EC /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		554D0B2D2912A04C00DE78EC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				554D0B1C29129FD800DE78EC /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		554D0B2E2912A05900DE78EC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				554D0B1E29129FD800DE78EC /* Main.storyboard */,
+				554D0B2329129FDA00DE78EC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		554D0B2F2912A06400DE78EC /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				554D0B2129129FDA00DE78EC /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		554D0B302912A17E00DE78EC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				554D0B312912A19D00DE78EC /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		554D0B362912A81900DE78EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				554D0B372912A83900DE78EC /* Animation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +139,9 @@
 			dependencies = (
 			);
 			name = RandomAnimations;
+			packageProductDependencies = (
+				554D0B342912A22E00DE78EC /* SpringAnimation */,
+			);
 			productName = RandomAnimations;
 			productReference = 554D0B1529129FD800DE78EC /* RandomAnimations.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 554D0B0C29129FD800DE78EC;
+			packageReferences = (
+				554D0B332912A22E00DE78EC /* XCRemoteSwiftPackageReference "SpringAnimation" */,
+			);
 			productRefGroup = 554D0B1629129FD800DE78EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +201,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				554D0B1D29129FD800DE78EC /* ViewController.swift in Sources */,
+				554D0B322912A19D00DE78EC /* DataManager.swift in Sources */,
 				554D0B1929129FD800DE78EC /* AppDelegate.swift in Sources */,
+				554D0B382912A83900DE78EC /* Animation.swift in Sources */,
 				554D0B1B29129FD800DE78EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,12 +353,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4KRJ9XKH55;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomAnimations/Info.plist;
+				INFOPLIST_FILE = RandomAnimations/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +367,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.AndreyAbakumov.RandomAnimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +385,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4KRJ9XKH55;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomAnimations/Info.plist;
+				INFOPLIST_FILE = RandomAnimations/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +399,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.AndreyAbakumov.RandomAnimations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		554D0B332912A22E00DE78EC /* XCRemoteSwiftPackageReference "SpringAnimation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LexDeBash/SpringAnimation";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		554D0B342912A22E00DE78EC /* SpringAnimation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 554D0B332912A22E00DE78EC /* XCRemoteSwiftPackageReference "SpringAnimation" */;
+			productName = SpringAnimation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 554D0B0D29129FD800DE78EC /* Project object */;
 }
